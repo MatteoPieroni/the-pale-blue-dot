@@ -19,6 +19,10 @@ export interface WebsiteConfig {
   /**
    * full url, no username
    */
+  instagram?: string;
+  /**
+   * full url, no username
+   */
   twitter?: string;
   /**
    * hide or show all email subscribe boxes
@@ -49,20 +53,21 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'Ghost',
-  description: 'The professional publishing platform',
+  title: 'The pale blue dot',
+  description: 'Un blog sul nostro rapporto con la terra',
   coverImage: 'img/blog-cover.jpg',
-  logo: 'img/ghost-logo.png',
-  lang: 'en',
-  siteUrl: 'https://gatsby-casper.netlify.com',
-  facebook: 'https://www.facebook.com/ghost',
-  twitter: 'https://twitter.com/tryghost',
+  //logo: 'img/ghost-logo.png',
+  lang: 'it',
+  siteUrl: 'https://thepalebluedot.it',
+  facebook: 'https://www.facebook.com/giulia.bernardini.7564',
+  instagram: 'https://instagram.com/angrygiulss',
   showSubscribe: true,
-  mailchimpAction: 'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
+  mailchimpAction:
+    'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
   mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
   mailchimpEmailFieldName: 'MERGE0',
   googleSiteVerification: 'GoogleCode',
-  footer: 'is based on Gatsby Casper',
+  footer: 'is built by Matteo Pieroni based on Gatsby Casper',
 };
 
 export default config;

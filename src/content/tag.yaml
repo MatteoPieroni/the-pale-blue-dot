@@ -1,3 +1,27 @@
-- id: speeches
+- id: noi-e-la-terra
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: riflessioni
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: plastica
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: zero-waste
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: pallido-pallino-blu
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: pianeta
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: sagan
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: terra
+  description: Some of the greatest words ever spoken.
+  image: img/speeches-cover.jpg
+- id: risorse
   description: Some of the greatest words ever spoken.
   image: img/speeches-cover.jpg
