@@ -20,8 +20,36 @@ declare module 'rehype-react' {
     components: any;
   }
   class RehypeReact {
-    Compiler: any
+    Compiler: any;
     constructor(options: RehypeOptions);
   }
   export default RehypeReact;
+}
+
+export interface IInstagramPostApi {
+  caption: string;
+  comments: number;
+  id: string;
+  likes: number;
+  localFile: {
+    childImageSharp: {
+      fluid: {
+        aspectRatio: number;
+        base64: string;
+        sizes: string;
+        src: string;
+        srcSet: string;
+        srcSetWebp: string;
+        srcWebp: string;
+      };
+    };
+  };
+  username: string;
+}
+
+export interface IInstagramPost {
+  caption: string;
+  id: string;
+  likes: number;
+  src: string;
 }

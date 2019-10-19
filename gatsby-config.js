@@ -80,5 +80,11 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 'naturegiulia',
+      },
+    },
   ],
 };
