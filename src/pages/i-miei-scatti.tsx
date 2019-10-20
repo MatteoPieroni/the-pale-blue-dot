@@ -32,6 +32,16 @@ const PageTemplate = css`
 const InstagramGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  article {
+    margin: 1rem 1%;
+    max-width: 48%;
+
+    @media screen and (min-width: 768px) {
+      margin: 1rem 1.66666%;
+      max-width: 30%;
+    }
+  }
 `;
 
 const InstagramLink = styled.div`

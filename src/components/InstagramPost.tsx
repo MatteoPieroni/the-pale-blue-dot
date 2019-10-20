@@ -7,11 +7,9 @@ export interface IInstagramPostProps {
 }
 
 const InstagramPostStyled = styled.article`
-  margin: 1rem 1.66666%;
   border: 1px solid #eee;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  max-width: 30%;
 
   img {
     display: block;
