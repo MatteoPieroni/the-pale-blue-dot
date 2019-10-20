@@ -171,10 +171,12 @@ const IndexPage: React.FC<IndexProps> = props => {
           </div>
         </main>
         {props.children}
-        <Pagination
-          currentPage={props.pageContext.currentPage}
-          numPages={props.pageContext.numPages}
-        />
+        {props.pageContext.numPages > 1 && (
+          <Pagination
+            currentPage={props.pageContext.currentPage}
+            numPages={props.pageContext.numPages}
+          />
+        )}
         <Footer />
       </Wrapper>
     </IndexLayout>
