@@ -1,6 +1,6 @@
 ---
 title: "Terra, nostra casa"
-author: Another Author
+author: Giulia
 tags: ["Noi e la terra", "Pallido pallino blu", "Pianeta", "Riflessioni", "Sagan", "Terra"]
 image: img/demo1.jpg
 date: "2016-02-02T10:00:00.000Z"
