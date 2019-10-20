@@ -59,7 +59,7 @@ export interface WebsiteConfig {
 const config: WebsiteConfig = {
   title: 'The pale blue dot',
   description: 'Un blog sul nostro rapporto con la terra',
-  coverImage: 'img/blog-cover.jpg',
+  coverImage: 'img/pale-blue-dot-blog-giulia-bernardini.jpg',
   logo: '',
   lang: 'it',
   siteUrl: 'https://thepalebluedot.it',
