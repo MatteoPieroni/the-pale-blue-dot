@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import { IInstagramPost, IInstagramPostApi } from '../typings';
@@ -13,6 +14,7 @@ import { PostFullHeader, PostFullTitle, NoImage, PostFull } from '../templates/p
 import { PostFullContent } from '../components/PostContent';
 import Footer from '../components/Footer';
 import { InstagramPost } from '../components/InstagramPost';
+import config from '../website-config';
 
 interface IInstagramQuery {
   edges: {
@@ -24,6 +26,32 @@ const PageTemplate = css`
   .site-main {
     background: #fff;
     padding-bottom: 4vw;
+  }
+`;
+
+const InstagramGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const InstagramLink = styled.div`
+  margin: 2rem auto;
+  text-align: center;
+
+  a {
+    border: #3c3c3c 1px solid;
+    border-radius: 20px;
+    padding: 7px 10px;
+    color: #3c3c3c;
+    line-height: 1em;
+    box-shadow: none;
+
+    :hover {
+      background: #3c3c3c;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -75,15 +103,24 @@ const About: React.FC<{ data: any }> = ({ data: { allInstaNode } }) => {
         <main id="site-main" className="site-main" css={[SiteMain, outer]}>
           <article className="post page" css={[PostFull, NoImage]}>
             <PostFullHeader>
-              <PostFullTitle>CIAO, SONO…</PostFullTitle>
+              <PostFullTitle>I miei scatti</PostFullTitle>
             </PostFullHeader>
-
             <PostFullContent className="post-full-content">
               <div className="post-content">
-                Nodi
-                {instagramPosts &&
-                  instagramPosts.map(post => <InstagramPost post={post} key={post.id} />)}
-                {console.log(instagramPosts)}
+                <InstagramGrid>
+                  {instagramPosts &&
+                    instagramPosts.map(post => <InstagramPost post={post} key={post.id} />)}
+                </InstagramGrid>
+                <InstagramLink>
+                  <a
+                    href={config.instagram}
+                    target="_blank"
+                    title="Pagina Instagram"
+                    rel="noopener noreferrer"
+                  >
+                    Vedi tutti i miei scatti
+                  </a>
+                </InstagramLink>
               </div>
             </PostFullContent>
           </article>

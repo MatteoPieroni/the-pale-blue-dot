@@ -74,6 +74,11 @@ const NavStyles = css`
     text-decoration: none;
     opacity: 1;
   }
+
+  a.active {
+    font-weight: 600;
+    text-decoration: underline;
+  }
 `;
 
 const SiteNavRight = styled.div`
@@ -135,13 +140,24 @@ class SiteNav extends React.Component<SiteNavProps> {
           <ul css={NavStyles} role="menu">
             {/* TODO: mark current nav item - add class nav-current */}
             <li role="menuitem">
-              <Link to="/">Home</Link>
+              <Link to="/" activeClassName="active">
+                Home
+              </Link>
             </li>
             <li role="menuitem">
-              <Link to="/ciao-sono/">Ciao, sono...</Link>
+              <Link to="/ciao-sono/" activeClassName="active">
+                Ciao, sono...
+              </Link>
             </li>
             <li role="menuitem">
-              <Link to="/tags/zero-waste/">Zero waste</Link>
+              <Link to="/i-miei-scatti/" activeClassName="active">
+                I miei scatti
+              </Link>
+            </li>
+            <li role="menuitem">
+              <Link to="/tags/zero-waste/" activeClassName="active">
+                Zero waste
+              </Link>
             </li>
           </ul>
         </SiteNavLeft>
@@ -182,7 +198,7 @@ class SiteNav extends React.Component<SiteNavProps> {
             )}
           </SocialLinks>
           {config.showSubscribe && (
-            <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
+            <SubscribeButton onClick={this.openModal}>Iscriviti</SubscribeButton>
           )}
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         </SiteNavRight>
