@@ -9,6 +9,7 @@ import config from '../../website-config';
 import Facebook from '../icons/facebook';
 import Instagram from '../icons/instagram';
 import Twitter from '../icons/twitter';
+import ResearchGate from '../icons/researchGate';
 import SubscribeModal from '../subscribe/SubscribeOverlay';
 import SiteNavLogo from './SiteNavLogo';
 
@@ -194,6 +195,17 @@ class SiteNav extends React.Component<SiteNavProps> {
                 rel="noopener noreferrer"
               >
                 <Twitter />
+              </a>
+            )}
+            {config.researchGate && (
+              <a
+                css={SocialLink}
+                href={config.researchGate}
+                title="Research gate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ResearchGate />
               </a>
             )}
           </SocialLinks>

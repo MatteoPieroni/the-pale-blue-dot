@@ -94,6 +94,11 @@ const Footer: React.FC = () => {
               Instagram
             </a>
           )}
+          {config.researchGate && (
+            <a href={config.researchGate} target="_blank" rel="noopener noreferrer">
+              Research gate
+            </a>
+          )}
           <a href="/rss.xml">RSS</a>
         </SiteFooterNav>
       </div>

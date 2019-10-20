@@ -25,6 +25,10 @@ export interface WebsiteConfig {
    */
   twitter?: string;
   /**
+   * full url, no username
+   */
+  researchGate?: string;
+  /**
    * hide or show all email subscribe boxes
    */
   showSubscribe: boolean;
@@ -56,11 +60,12 @@ const config: WebsiteConfig = {
   title: 'The pale blue dot',
   description: 'Un blog sul nostro rapporto con la terra',
   coverImage: 'img/blog-cover.jpg',
-  //logo: 'img/ghost-logo.png',
+  logo: '',
   lang: 'it',
   siteUrl: 'https://thepalebluedot.it',
   facebook: 'https://www.facebook.com/giulia.bernardini.7564',
   instagram: 'https://instagram.com/naturegiulia',
+  researchGate: 'https://www.researchgate.net/profile/Giulia_Bernardini6',
   showSubscribe: true,
   mailchimpAction:
     'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
