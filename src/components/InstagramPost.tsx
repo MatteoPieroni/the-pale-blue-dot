@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { IInstagramPost } from '../typings';
 
-export interface IInstagramPostProps {
+export interface InstagramPostProps {
   post: IInstagramPost;
 }
 
@@ -48,12 +48,12 @@ const InstagramPostStyled = styled.article`
   }
 `;
 
-export const InstagramPost: (props: IInstagramPostProps) => JSX.Element = ({
-  post: { caption, id, likes, src },
+export const InstagramPost: (props: InstagramPostProps) => JSX.Element = ({
+  post: { caption, id, src },
 }) => {
   return (
     <InstagramPostStyled>
-      <a href={`https://www.instagram.com/p/${id}/`} target="_blank">
+      <a href={`https://www.instagram.com/p/${id}/`} target="_blank" rel="noopener noreferrer">
         <img src={src} />
       </a>
       <main>

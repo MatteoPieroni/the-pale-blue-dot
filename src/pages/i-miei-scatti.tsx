@@ -16,10 +16,10 @@ import Footer from '../components/Footer';
 import { InstagramPost } from '../components/InstagramPost';
 import config from '../website-config';
 
-interface IInstagramQuery {
-  edges: {
+interface InstagramQuery {
+  edges: Array<{
     node: IInstagramPostApi;
-  }[];
+  }>;
 }
 
 const PageTemplate = css`
@@ -66,7 +66,7 @@ const InstagramLink = styled.div`
 `;
 
 const extractInstagramPostDetails: (
-  query: IInstagramQuery,
+  query: InstagramQuery,
 ) => IInstagramPost[] | null = allInstaNodes => {
   const { edges } = allInstaNodes || {};
   console.log(allInstaNodes);
@@ -119,7 +119,7 @@ const About: React.FC<{ data: any }> = ({ data: { allInstaNode } }) => {
               <div className="post-content">
                 <InstagramGrid>
                   {instagramPosts &&
-                    instagramPosts.map(post => <InstagramPost post={post} key={post.id} />)}
+                    instagramPosts.map(post => <InstagramPost key={post.id} post={post} />)}
                 </InstagramGrid>
                 <InstagramLink>
                   <a
