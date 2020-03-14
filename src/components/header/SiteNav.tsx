@@ -151,11 +151,6 @@ class SiteNav extends React.Component<SiteNavProps> {
               </Link>
             </li>
             <li role="menuitem">
-              <Link to="/i-miei-scatti/" activeClassName="active">
-                I miei scatti
-              </Link>
-            </li>
-            <li role="menuitem">
               <Link to="/tags/zero-waste/" activeClassName="active">
                 Zero waste
               </Link>
